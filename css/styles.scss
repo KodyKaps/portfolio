@@ -1,0 +1,273 @@
+$primaryBtn: #510202;
+$secondaryBtn: #3f3d3d;
+$background: white;
+$fontFamily: "Poppins", sans-serif;
+$buttonBackgroundColor: grey;
+$borderBottomColor: black;
+$activeColor: #3e3e3e;
+$visitedColor: #3f3f3f;
+
+h1 {
+    font-family: $fontFamily;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 1.5;
+  }
+  
+  footer {
+    font-family: $fontFamily;
+    font-size: 20px;
+    line-height: 1.0;
+  }
+  
+  a {
+    color: $secondaryBtn;
+  
+    &:hover {
+      text-decoration: none;
+    }
+  
+    &:visited {
+      color: $visitedColor;
+    }
+  
+    &:active {
+      color: $activeColor;
+    }
+  
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
+  
+  button {
+    border: none;
+    font-family: inherit;
+    background-color: $buttonBackgroundColor;
+    color:$background;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    border-bottom: $borderBottomColor;
+  
+    &:hover, &:focus {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+  
+  .button__secondary {
+    background-color: $primaryBtn;
+    color:$background;
+  }
+  
+  .navigation-list__item--active {
+    text-decoration: none;
+  }
+  
+  .profile_portrait {
+    float: left;
+    object-fit: contain;
+    width: 250px;
+    margin-right: 40px;
+    border-radius: 50%;
+  }
+  
+  .page-footer {
+    clear: both;
+  }
+  
+  .profile {
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .page-footer {
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .page-header {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .profile_text {
+    flex: 1 1 100px;
+  }
+  
+  .page-header__item:last-child {
+    flex-grow: 1;
+    text-align: right;
+  }
+  
+  .navigation-list {
+    list-style-type: none;
+  
+    li {
+      display: inline-block;
+      margin-left: 15px;
+    }
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
+  
+  .grid-item {
+    background-color: $background;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .grid__item:last-child {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  
+  @media all and (max-width: 500px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media all and (min-width: 500px) and (max-width: 750px) {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media all and (max-width: 750px) {
+    .grid {
+      grid-gap: 10px;
+    }
+  
+    .grid__item:last-child {
+      grid-column: auto / auto;
+      grid-row: auto / auto;
+    }
+  
+    h1 {
+      font-size: 22px;
+    }
+  }
+  
+  .button {
+    border: none;
+    display: inline-block;
+    font-family: inherit;
+    background-color: $primaryBtn;
+    color: $background;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    transition: opacity 0.2s;
+  }
+  
+  button {
+    border: none;
+    display: inline-block;
+    font-family: inherit;
+    background-color: $primaryBtn;
+    color: $background;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    transition: opacity 0.2s;
+  
+    &:hover, &:focus {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+  
+  .button {
+    &:hover, &:focus {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+  
+  @keyframes color-change {
+    0% {
+      fill: #edc655;
+    }
+  
+    50% {
+      fill: #fcffad;
+    }
+  
+    100% {
+      fill: #f76414;
+    }
+  }
+  
+  @keyframes color-change {
+    0% {
+      fill: #edc655;
+    }
+  
+    50% {
+      fill: #fcffad;
+    }
+  
+    100% {
+      fill: #f76414;
+    }
+  }
+  
+  .sun {
+    animation-duration: 5s;
+    animation-name: color-change;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes cloud-move {
+    from {
+      transform: translate(0, 50px);
+    }
+  
+    to {
+      transform: translate(200px, 50px);
+    }
+  }
+  
+  @keyframes cloud-move-reverse {
+    from {
+      transform: translate(446px, 48px);
+    }
+  
+    to {
+      transform: translate(100px, 48px);
+    }
+  }
+  
+  .cloud-front {
+    animation-duration: 25s;
+    animation-name: cloud-move;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+  
+  .cloud-back {
+    animation: 25s cloud-move-reverse infinite alternate linear;
+  }
+  
